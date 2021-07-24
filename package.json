@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "Validate object data in JS based on a given data model",
   "main": "validator.js",
+  "types": "types/Validator.d.ts",
   "scripts": {
     "test": "node test.js",
     "dts": "tsc Validator.js --declaration --allowJs --emitDeclarationOnly --outDir types"
