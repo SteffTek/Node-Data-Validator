@@ -36,19 +36,20 @@ import Validator from "@stefftek/node-data-validator";
 */
 const Validator = require("./Validator");
 
-// TEST DATA
+// Create test data
 const input = {
     name: 'John',
     age: 23,
-    email: "john@dou.de",
+    email: "john@example.com",
     address: {
         street: "Main Street",
         city: "New York",
         zip: 24654
     },
-    userIDs: [{test:"asdf"},{test:"asdf"}]
+    userIDs: [128923891]
 }
 
+// Create model
 const model = {
     name: String,
     age: Number,
@@ -58,9 +59,12 @@ const model = {
         city: String,
         zip: Number
     },
-    userIDs: [{test:String},{test:String}],
+    userIDs: [Number],
 }
 
+// Output result
 console.log(Validator(input, model));
 ```
 
+### Limitations
+If you specify an array like `[Number]` only the first layer of the data layer will be validated. If you need more layers, you need to specify them inside the array.
