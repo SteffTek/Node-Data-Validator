@@ -1,6 +1,6 @@
 /**
  * Checks if object is valid with model
- * @param {object} object object to check
+ * @param {object} input object to check
  * @param {object} model model to check against
  * @returns {boolean} is object valid
  */
@@ -8,7 +8,7 @@ const Validator = (input, model) => {
 
     /**
      * Recursively check if object is valid
-     * @param {object} object object to check
+     * @param {object} input object to check
      * @param {object} model model to check against
      */
     function recursion(input, model) {
