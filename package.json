@@ -1,6 +1,6 @@
 {
   "name": "node-data-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validate object data in JS based on a given data model",
   "main": "validator.js",
   "scripts": {
