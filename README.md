@@ -10,11 +10,11 @@ This **Data Validator** was created out of necessity to validate received object
 # Installation
 NodeJS Installation
 ```
-npm i @stefftek/node-data-validator
+npm i node-data-validator
 ```
 ***or*** - script tag for the browser
 ```html
-<script src="https://unpkg.com/@stefftek/node-data-validator@latest/Validator.js" type="text/javascript"></script>
+<script src="https://unpkg.com/node-data-validator@latest/Validator.js" type="text/javascript"></script>
 ```
 
 # Usage
@@ -22,12 +22,12 @@ npm i @stefftek/node-data-validator
 with Common JS
 ```js
 /* Import Tick.js */
-const Validator = require("@stefftek/node-data-validator");
+const Validator = require("node-data-validator");
 ```
 **or** - TypeScript Import
 ```js
 /* Import Tick.js */
-import Validator from "@stefftek/node-data-validator";
+import Validator from "node-data-validator";
 ```
 ### Using the Module
 ```js
