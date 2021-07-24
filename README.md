@@ -21,12 +21,12 @@ npm i node-data-validator
 ### Import
 with Common JS
 ```js
-/* Import Tick.js */
+/* Import Validator */
 const Validator = require("node-data-validator");
 ```
 **or** - TypeScript Import
 ```js
-/* Import Tick.js */
+/* Import Validator */
 import Validator from "node-data-validator";
 ```
 ### Using the Module
