@@ -1,0 +1,28 @@
+{
+  "name": "node-data-validator",
+  "version": "1.0.0",
+  "description": "Validate object data in JS based on a given data model",
+  "main": "validator.js",
+  "scripts": {
+    "test": "node test.js",
+    "dts": "tsc Validator.js --declaration --allowJs --emitDeclarationOnly --outDir types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SteffTek/Node-Data-Validator.git"
+  },
+  "keywords": [
+    "Node",
+    "Data",
+    "Validation",
+    "Object",
+    "Model",
+    "Arrays"
+  ],
+  "author": "SteffTek",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/SteffTek/Node-Data-Validator/issues"
+  },
+  "homepage": "https://github.com/SteffTek/Node-Data-Validator#readme"
+}
