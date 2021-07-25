@@ -5,7 +5,7 @@ const {Validator, DetailedValue} = require("./Validator");
 
 // TEST DATA
 const input = {
-    name: 'John',
+    name: "John",
     age: 23,
     email: "john@dou.de",
     address: {

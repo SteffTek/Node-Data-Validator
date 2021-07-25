@@ -1,10 +1,10 @@
 [![Discord](https://img.shields.io/discord/803319138260090910?color=%237289DA&label=Discord)](https://discord.gg/Qgv8DSMYM3) ![License](https://img.shields.io/github/license/SteffTek/Node-Data-Validator) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/stefftek/Node-Data-Validator)](https://github.com/SteffTek/Node-Data-Validator) [![GitHub issues](https://img.shields.io/github/issues/stefftek/Node-Data-Validator)](https://github.com/SteffTek/Node-Data-Validator/issues) ![Build](https://img.shields.io/github/workflow/status/SteffTek/Node-Data-Validator/Node.js%20Package)
 
 # Node Data Validator
-**Validate JavaScript objects based on an given model recursively**
+**Validate JavaScript objects based on an given model recursively.**
 
 # About
-This **Data Validator** was created out of necessity to validate received objects against an given data model on a websocket server, but it can be used to compare any data.
+This **Data Validator** was created out of necessity to validate received objects against an given data model on a websocket server, but it can be used to compare any data. You can specify data models with details like min- *or* max-size and more.
 
 ## New in 1.1.0
 - Introducing: **DetailedValues** - specify exactly what you need. Read further to learn more.
