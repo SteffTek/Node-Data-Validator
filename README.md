@@ -100,12 +100,12 @@ const model = {
 You can use the Type declaration in the DetailedValue exactly like the rest of the model, so things like `[[Number]]` and other shinanigans work fine.
 
 A DetailedValue has the following options:
-| Option   | Type    | Description                        | Values            |
-|----------|---------|------------------------------------|-------------------|
-| required | boolean | Is the value required?             | `true` or `false` |
-| min      | number  | Min length of the value.           | `Number`          |
-| max      | number  | Max length of the value.           | `Number`          |
-| isEmail  | boolean | Validate if the value is an email. | `true` or `false` |
+| Option   | Type    | Description                        | Values            | Default |
+|----------|---------|------------------------------------|-------------------|---------|
+| required | boolean | Is the value required?             | `true` or `false` | `true`  |
+| min      | number  | Min length of the value.           | `Number`          | `null`  |
+| max      | number  | Max length of the value.           | `Number`          | `null`  |
+| isEmail  | boolean | Validate if the value is an email. | `true` or `false` | `false` |
 
 ### Limitations
 If you specify an array like `userIDs: [Number]` only the first data type - in this case `Number` - will be verified against the data array.
