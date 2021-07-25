@@ -6,6 +6,9 @@
 # About
 This **Data Validator** was created out of necessity to validate received objects against an given data model on a websocket server, but it can be used to compare any data.
 
+## New in 1.1.0
+- Introducing: **DetailedValues** - specify exactly what you need. Read further to learn more.
+- Now deep searching arrays is possible.
 
 # Installation
 NodeJS Installation
@@ -22,19 +25,19 @@ npm i node-data-validator
 with Common JS
 ```js
 /* Import Validator */
-const Validator = require("node-data-validator");
+const {Validator} = require("node-data-validator");
 ```
 **or** - TypeScript Import
 ```js
 /* Import Validator */
-import Validator from "node-data-validator";
+import {Validator} from "node-data-validator";
 ```
 ### Using the Module
 ```js
 /*
     IMPORTS
 */
-const Validator = require("./Validator");
+const {Validator} = require("./Validator");
 
 // Create test data
 const input = {
@@ -46,7 +49,7 @@ const input = {
         city: "New York",
         zip: 24654
     },
-    userIDs: [128923891]
+    userIDs: [128923891, 238923, 234324, 234234, 23623456]
 }
 
 // Create model
@@ -66,5 +69,43 @@ const model = {
 console.log(Validator(input, model));
 ```
 
+### Detailed Values
+Working with DetailedValues is exactly as working with primitives. Firstly, import DetailedValues together with the Validator Function.
+with Common JS
+```js
+/* Import Validator */
+const {Validator, DetailedValue} = require("node-data-validator");
+```
+**or** - TypeScript Import
+```js
+/* Import Validator */
+import {Validator, DetailedValue} from "node-data-validator";
+```
+
+Then specify your model as following:
+```js
+// Create model
+const model = {
+    name: new DetailedValue(String, {required: true, min: 4}),
+    age: Number,
+    email: String,
+    address: {
+        street: String,
+        city: String,
+        zip: Number
+    },
+    userIDs: [Number],
+}
+```
+You can use the Type declaration in the DetailedValue exactly like the rest of the model, so things like `[[Number]]` and other shinanigans work fine.
+
+A DetailedValue has the following options:
+| Option   | Type    | Description                        | Values            |
+|----------|---------|------------------------------------|-------------------|
+| required | boolean | Is the value required?             | `true` or `false` |
+| min      | number  | Min length of the value.           | `Number`          |
+| max      | number  | Max length of the value.           | `Number`          |
+| isEmail  | boolean | Validate if the value is an email. | `true` or `false` |
+
 ### Limitations
-If you specify an array like `[Number]` only the first layer of the data layer will be validated. If you need more layers, you need to specify them inside the array.
+If you specify an array like `userIDs: [Number]` only the first data type - in this case `Number` - will be verified against the data array.

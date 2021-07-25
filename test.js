@@ -1,7 +1,7 @@
 /*
     IMPORTS
 */
-const Validator = require("./Validator");
+const {Validator, DetailedValue} = require("./Validator");
 
 // TEST DATA
 const input = {
@@ -13,19 +13,19 @@ const input = {
         city: "New York",
         zip: 24654
     },
-    userIDs: [{test:"asdf"},{test:"asdf"}]
+    userIDs: [234234, 23094, 234, 233467, 345652]
 }
 
 const model = {
-    name: String,
-    age: Number,
-    email: String,
+    name: new DetailedValue(String, {required: true, min: 3}),
+    age: new DetailedValue(Number, {required: true, min: 18}),
+    email: new DetailedValue(String, {required: true, isEmail: true}),
     address: {
         street: String,
         city: String,
         zip: Number
     },
-    userIDs: [{test:String},{test:String}],
+    userIDs: new DetailedValue([Number], {required: true, min: 1}),
 }
 
 console.log(Validator(input, model));
