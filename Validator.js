@@ -163,8 +163,10 @@ class DetailedValue {
 
         // Check if is email
         if(this.isEmail) {
-            if(!this.validateEmail(input, true)) {
-                return false;
+            if(this.required || input) {
+                if(!this.validateEmail(input, true)) {
+                    return false;
+                }
             }
         }
 
