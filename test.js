@@ -13,7 +13,8 @@ const input = {
         city: "New York",
         zip: 24654
     },
-    userIDs: [234234, 23094, 234, 233467, 345652]
+    userIDs: [234234, 23094, 234, 233467, 345652],
+    number: 2
 }
 
 const model = {
@@ -26,6 +27,8 @@ const model = {
         zip: Number
     },
     userIDs: new DetailedValue([Number], {required: true, min: 1}),
+    email2: new DetailedValue(String, {required: false, isEmail: true}),
+    number: new DetailedValue(Number, {min: 1})
 }
 
 console.log(Validator(input, model));
