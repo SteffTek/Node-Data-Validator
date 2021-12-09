@@ -152,12 +152,12 @@ class DetailedValue {
         }
 
         // Check if length is min valid
-        if(this.min && length < this.min) {
+        if(this.min != undefined && length < this.min) {
             return false;
         }
 
         // Check if length is max valid
-        if(this.max && length > this.max) {
+        if(this.max != undefined && length > this.max) {
             return false;
         }
 
